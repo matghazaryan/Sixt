@@ -22,9 +22,9 @@ You can see the demonstration of application [here](https://youtu.be/vJePn2CLm_8
 
 I have divided project into several modules
 
-- **App** module - *This module is responsible for almost nothing and is actually doing nothing except managing dependency injection and including other modules*
+- **App module** - *This module is responsible for almost nothing and is actually doing nothing except managing dependency injection and including other modules*
 
-- **Data** modules - *Those modules are about providing data. Each module is reponsible for the creation of its objects by creating a DI Module. Data modules contains remote,local and repository module*
+- **Data modules** - *Those modules are about providing data. Each module is reponsible for the creation of its objects by creating a DI Module. Data modules contains remote,local and repository module*
 
 - **Feature module** - *Those modules represent the features of app. I can say each screen. Feature module is responsible for creating its dependencies through DI Module*
 
