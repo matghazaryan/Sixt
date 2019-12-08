@@ -1,8 +1,6 @@
 # Sixt
 
-I tried to use most recent and used libraries.
-
-I tried to create simple UI using Sixt app color and logos.
+I tried to use most recent and used libraries and create simple UI using Sixt app color and logos.
 
 Application works also in **offline mode**. If once the data fetched from internet you can start using it in offline mode. If the first time the data couldn't retrive from the server error messaged appears.
 
