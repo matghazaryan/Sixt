@@ -48,4 +48,4 @@ I have divided project into several modules
 # Unit testing
 - **Koin**  - A pragmatic lightweight dependency injection framework for Kotlin developers. Written in pure Kotlin using functional resolution only: no proxy, no code generation, no reflection!
 
-There is unit testing on each module (remote,local, repository, list)
+There are unit testings on each module (remote,local, repository, list)
