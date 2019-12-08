@@ -20,7 +20,7 @@ You can see the demonstration of application [here](https://youtu.be/vJePn2CLm_8
 
 - **Koin** for dependency injection
 
-#Multi-modules
+# Multi-modules
 
 I have divided project into several modules
 
@@ -34,7 +34,7 @@ I have divided project into several modules
 
 - **Common & CommonTest modules** - Those modules contain some common classes potentially usable everywhere. 
 
-#MVVM and Databinding
+# MVVM and Databinding
 - **ViewModel** - easiest way to store and manage UI-related data in a lifecycle conscious way. It allows data to survice on configration changes.
 
 - **Model** - represents the data and the business logic.
@@ -47,7 +47,7 @@ I have divided project into several modules
 
 - **Databinding** - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
 
-#Unit testing
+# Unit testing
 - **Koin**  - A pragmatic lightweight dependency injection framework for Kotlin developers. Written in pure Kotlin using functional resolution only: no proxy, no code generation, no reflection!
 
 There is unit testing on each module (remote,local, repository, list)
