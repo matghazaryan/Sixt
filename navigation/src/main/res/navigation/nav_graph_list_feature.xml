@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_list_feature"
+    app:startDestination="@id/splashFragment">
+
+    <fragment android:id="@+id/splashFragment"
+        android:name="com.mg.android.splash.view.SplashFragment"
+        android:label="Sixt">
+
+
+        <action android:id="@+id/action_splashFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/right_to_left_1"
+            app:exitAnim="@anim/right_to_left_2"
+            app:popEnterAnim="@anim/left_to_right_1"
+            app:popExitAnim="@anim/left_to_right_2"
+            app:popUpTo="@id/nav_graph_list_feature"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <fragment android:id="@+id/listFragment"
+        android:name="com.mg.android.list.views.ListFragment"
+        android:label="Sixt">
+
+        <action android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" >
+
+            <argument
+                android:name="car"
+                app:nullable="true"
+            app:argType="com.mg.android.model.Car"/>
+        </action>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/detailFragment"
+        android:name="com.mg.android.list.views.DetailsFragment"
+        android:label="Sixt">
+
+    </fragment>
+</navigation>

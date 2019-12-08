@@ -1,0 +1,28 @@
+apply plugin: 'kotlin-kapt'
+apply from: '../../android_feature_dependencies.gradle'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "com.mg.android.common_test.FakeRunner"
+    }
+    dataBinding {
+        enabled true
+    }
+    testOptions {
+        animationsDisabled = true
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    // GLIDE
+    implementation Libraries.glide
+    implementation Libraries.googleMap
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.constraintLayout
+    implementation AndroidLibraries.cardView
+    implementation AndroidLibraries.legacy
+}

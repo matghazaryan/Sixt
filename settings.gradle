@@ -1,0 +1,2 @@
+include ':app', ':buildSrc',  ':navigation', ':common', ':common_test',  'data:model', 'data:remote', 'data:local', 'data:repository', 'features:list'
+rootProject.name='Sixt'
