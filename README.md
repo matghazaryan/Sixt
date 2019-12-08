@@ -21,6 +21,7 @@ You can see the demonstration of application [here](https://youtu.be/vJePn2CLm_8
 - **Koin** for dependency injection
 
 #Multi-modules
+
 I have divided project into several modules
 
 - **App** module - *This module is responsible for almost nothing and is actually doing nothing except managing dependency injection and including other modules*
