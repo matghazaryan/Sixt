@@ -41,7 +41,7 @@ I have divided project into several modules
 
 - **View** - this component has simply the responsibility to observe the LiveData and react to its changes
 
-**Repository** - serves as the communication bridge between the data and the rest of the app
+- **Repository** - serves as the communication bridge between the data and the rest of the app
 
 - **Databinding** - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
 
