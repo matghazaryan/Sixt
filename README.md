@@ -2,7 +2,7 @@
 
 I tried to use most recent and used libraries and create simple UI using Sixt app color and logos.
 
-Application works also in **offline mode**. If once the data fetched from internet you can start using it in offline mode. If the first time the data couldn't retrive from the server error messaged appears.
+Application works also in **offline mode**. If once the data fetched from internet you can start using it in offline mode. If the first time the data couldn't retrive from the server error message appears.
 
 You can find APK file from [here](http://bit.ly/2rgdQ9n)
 
