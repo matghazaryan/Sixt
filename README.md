@@ -8,6 +8,8 @@ You can find APK file from [here](http://bit.ly/2rgdQ9n)
 
 You can see the demonstration of application [here](https://youtu.be/vJePn2CLm_8)
 
+# Archtecture and libraries
+
 - **Architecture Components** (Navigation, ViewModel, Databinding, LiveData)
 
 - **Room** for SQLite
