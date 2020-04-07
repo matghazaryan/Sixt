@@ -8,6 +8,11 @@ dependencies {
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
     implementation project(Modules.navigation)
+    // COMMON
+    implementation project(Modules.repository)
+    implementation AndroidLibraries.lifecycleViewModel
+
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

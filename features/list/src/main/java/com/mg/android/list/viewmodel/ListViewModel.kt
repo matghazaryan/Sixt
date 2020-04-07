@@ -15,9 +15,10 @@ import com.mg.android.repository.utils.Resource
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class ListViewModel(private val getCarUseCase: GetCarUseCase,
-                    private val dispatchers: AppDispatchers
-) : BaseViewModel(){
+class ListViewModel(
+    private val getCarUseCase: GetCarUseCase,
+    private val dispatchers: AppDispatchers
+) : BaseViewModel() {
     private val _cars = MediatorLiveData<Resource<List<Car>>>()
     val cars: LiveData<Resource<List<Car>>> get() = _cars
     private var carSource: LiveData<Resource<List<Car>>> = MutableLiveData()
@@ -26,21 +27,20 @@ class ListViewModel(private val getCarUseCase: GetCarUseCase,
         getCars()
     }
 
-    fun clicksOnItem(car: Car) = navigate(ListFragmentDirections.
-    actionListFragmentToDetailFragment(car))
+    fun clicksOnItem(car: Car) = navigate(
+        ListFragmentDirections.actionListFragmentToDetailFragment(car)
+    )
 
 
-    fun carRefreshesItems()
-            = getCars()
+    fun carRefreshesItems() = getCars()
 
-    private fun getCars() = viewModelScope.launch(dispatchers.main) {
+    private fun getCars() = handleRequest(dispatchers, { getCarUseCase() }, { result ->
         _cars.removeSource(carSource)
-        withContext(dispatchers.io) { carSource = getCarUseCase() }
+        carSource = result
         _cars.addSource(carSource) {
             _cars.value = it
-            if (it.status == Resource.Status.ERROR) _snackbarError.value = Event(R.string.an_error_happened)
         }
-    }
+    })
 
     fun openMapFragment() {
         navigate(ListFragmentDirections.actionListFragmentToDetailFragment(Car()))
